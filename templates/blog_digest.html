@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block content %}
+	{% for blogItem in blogItems %}
+		<div class="post">
+		  <div class="post-heading">
+      			{{blogItem.subject}}
+		    <div class="post-date">
+			{{blogItem.created}}
+		    </div>
+		  </div>
+
+		  <div class="post-content">
+			{{blogItem.content}}
+  			</div>
+		</div>
+	    <br><br>
+	{% endfor %}
+
+	<div class="age">
+	queried {{age}} seconds ago
+	</div>
+{% endblock %}
